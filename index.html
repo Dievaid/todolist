@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <title>TODO App</title>
+</head>
+<body>
+    <div>
+        <div class="navbar">
+            <div class="lgo">
+                <img class = "todoLogo" src="./assets/logo.png" alt="logo"/>
+                <p>ToDoList</p>
+            </div>
+            <p>@Copyright <b>David Capragiu</b></p>
+        </div>
+
+        <div class="wtfBro">
+            <div class="sides left">
+                <p class="start-text"><b>Active tasks</b></p>
+            </div>
+            <div class="note">
+                <div id="init">Currently, the list is empty!</div>
+            </div>
+            <div class="sides right">
+                <p class="start-text"><b>Done tasks</b></p>
+            </div>
+        </div>
+
+        <div class="buttonGroup">
+            <button class="uk-button uk-button-danger uk-button-large" id="leftBtn">Show active tasks</button>
+            <div style="display: flex; flex-direction: column;">
+                <input type="text" id="taskText" style="height: 5vh; font-size: 2vh; text-align: center;">
+                <button class="uk-button uk-button-primary uk-button-large" id="addBtn">Add</button>
+            </div>
+            <button class="uk-button uk-button-primar uk-button-large" style="color:white; 
+                background-color:rgb(0, 191, 35);" id="rightBtn">Show done tasks</button>
+        </div>
+    </div>
+
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
