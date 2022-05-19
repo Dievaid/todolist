@@ -38,6 +38,7 @@ document.getElementById("addBtn").addEventListener("click", () => {
     let inn = document.getElementById("taskText");
 
     if (!inn.value) {
+        alert("Please type a task name!");
         return;
     }
 
@@ -99,6 +100,7 @@ const leftSideProcess = () => {
     doneTasks.forEach((el) => {
         let pTag = document.createElement("p");
         pTag.innerHTML = el;
+        pTag.classList.add("toDelete");
         document.querySelector(".right").appendChild(pTag);
     });
 }
@@ -166,5 +168,22 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.querySelector(".note").animate(noteRight, time);
     } else {
         document.querySelector(".note").animate(noteLeft, time);
+    }
+});
+
+//? Clear completed tasks
+let clearBtn = document.getElementById("clearCompleted");
+
+clearBtn.addEventListener("click", () => {
+    let doneTasks = document.getElementsByClassName("done");
+    
+    while (doneTasks.length > 0) {
+        doneTasks[0].parentNode.parentNode.
+            removeChild(doneTasks[0].parentNode);
+    }
+
+    let toDeleteDoneSide = document.getElementsByClassName("toDelete");
+    while (toDeleteDoneSide.length > 0) {
+        toDeleteDoneSide[0].parentNode.removeChild(toDeleteDoneSide[0]);
     }
 });
